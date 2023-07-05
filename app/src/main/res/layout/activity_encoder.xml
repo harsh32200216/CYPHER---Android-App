@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg4"
+    tools:context=".Encoder"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Encrypter"
+                android:layout_gravity="center"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.533"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="0dp"
+                android:textColor="#ccc"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="5dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp">
+
+            <Spinner
+                android:id="@+id/spinn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:spinnerMode="dropdown"
+                tools:layout_editor_absoluteX="340dp"
+                tools:layout_editor_absoluteY="10dp"
+                android:outlineSpotShadowColor="#ccc"
+                android:outlineAmbientShadowColor="#ccc"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Enter your text here:"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textColor="#ccc"
+                />
+            
+            <EditText
+                android:id="@+id/etenc"
+                android:layout_width="360dp"
+                android:layout_height="60dp"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textColor="#ccc"
+                />
+            
+            <Button
+                android:layout_width="230dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:text="Encrypt"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#00FFFF"
+                android:onClick="enc"
+                android:layout_marginTop="10dp"
+                android:textColor="#36454F"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="5dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Your Encrypted text:"
+                android:textSize="20sp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:textColor="#ccc"
+                />
+
+            <TextView
+                android:id="@+id/enctv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:textColor="#ccc"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+
+            <Button
+                android:id="@+id/btndcp2"
+                android:layout_width="230dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:text="Copy"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#00FFFF"
+                android:onClick="cp2"
+                android:layout_marginTop="10dp"
+                android:textColor="#36454F"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Time Taken:"
+            android:textSize="15sp"
+            android:layout_marginTop="100dp"
+            android:textStyle="bold"
+            android:textColor="#ccc"
+            />
+
+        <TextView
+            android:id="@+id/tim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:textColor="#ccc"
+            />
+
+    </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
